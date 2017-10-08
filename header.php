@@ -40,10 +40,26 @@
 
 ?>
 
-<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1366 768" style="enable-background:new 0 0 1366 768;" xml:space="preserve">
+<div class="codesvg">
+<svg version="1.1" viewBox="0 0 1366 768" preserveAspectRatio="xMinYMin meet" class="svg-content">
 <style type="text/css">
+	body{
+		background-color: #BCAAA4;
+	}
+	.codesvg {
+			display: inline-block;
+			position: relative;
+			width: 100%;
+			padding-bottom: 100%;
+			vertical-align: middle;
+			overflow: hidden;
+		}
+	.svg-content {
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			left: 0;
+	}
 	.st0{fill:#BCAAA4;}
 	.st1{fill:#FFFFFF;}
 	.st2{fill:#444445;}
@@ -55,15 +71,41 @@
 	.st8{fill:#A7D4F0;}
 	.st9{fill:#F2858D;}
 	.st10{fill:#92D0B8;}
-	.st11{
+	.trait1{
 		fill:none;
 		stroke:#FBB03B;
 		stroke-width:4;
 		stroke-linecap:round;
 		stroke-miterlimit:10;
-		stroke-width:4px;
 		stroke-dasharray: 25 150;
-		animation: vent 4s linear infinite;
+		-webkit-animation-name: vent; 
+		-webkit-animation-duration: 3s;
+		animation: vent 3s linear infinite;
+		animation-delay: 1s;
+	}
+	.trait2{
+		fill:none;
+		stroke:#FBB03B;
+		stroke-width:4;
+		stroke-linecap:round;
+		stroke-miterlimit:10;
+		stroke-dasharray: 25 150;
+		-webkit-animation-name: vent; 
+		-webkit-animation-duration: 3s;
+		animation: vent 3s linear infinite;
+		animation-delay: 2.2s;
+	}
+	.trait3{
+		fill:none;
+		stroke:#FBB03B;
+		stroke-width:4;
+		stroke-linecap:round;
+		stroke-miterlimit:10;
+		stroke-dasharray: 25 150;
+		-webkit-animation-name: vent; 
+		-webkit-animation-duration: 3s;
+		animation: vent 3s linear infinite;
+		animation-delay: 3s;
 	}
 	.st12{fill:#A67C52;}
 	.st13{fill:#8C6239;}
@@ -81,22 +123,117 @@
 		stroke-linecap:round;
 		stroke-miterlimit:10;
 	}
-	@keyframes vent{
-				0%{stroke-dashoffset: 175; }
-				100%{stroke-dashoffset: 0;}
-			}
-	#minute{
+	.m1{
+		fill:none;
+		stroke:#FFFFFF;
+		stroke-width:3;
+		stroke-miterlimit:10;
+		stroke-dasharray: 800;
+		stroke-dashoffset:0;
+		-webkit-animation-name: bouge; 
+		-webkit-animation-duration: 4s; 
+		animation: bouge 4s linear forwards;
+		animation-delay: 1s;
+	}
+	.m2{
+		fill:none;
+		stroke:#FFFFFF;
+		stroke-width:3;
+		stroke-miterlimit:10;
+		stroke-dasharray: 800;
+		stroke-dashoffset:0; 
+		-webkit-animation-name: bouge; 
+		-webkit-animation-duration: 4s;
+		animation: bouge 4s linear forwards;
+		animation-delay: 3.2s;
+	}
+	.i{
+		fill:none;
+		stroke:#FFFFFF;
+		stroke-width:3;
+		stroke-miterlimit:10;
+		stroke-dasharray: 800;
+		stroke-dashoffset:0;
+		-webkit-animation-name: bouge; 
+		-webkit-animation-duration: 4s; 
+		animation: bouge 4s linear forwards;
+		animation-delay: 5s;
+	}
+	   #minute{
 		transform-origin: 50% 100%;
+		transform-box:fill-box;
+		-webkit-animation-name: rotate; 
+		-webkit-animation-duration: 3600s;
 		animation: rotate 3600s infinite linear;
 	}
 	#seconde{
 		transform-origin: 50% 100%;
+		transform-box:fill-box;
+		-webkit-animation-name: rotate; 
+		-webkit-animation-duration: 60s;
 		animation: rotate 60s infinite steps(60);
 	}
 	#heure{
 		transform-origin: 50% 100%;
+		transform-box:fill-box;
+		-webkit-animation-name: rotate; 
+		-webkit-animation-duration: 216000s;
 		animation: rotate 216000s infinite linear;
 	}
+	#pendulegauche{
+		fill:none;
+		stroke-width:6;
+		stroke-linecap:round;
+		stroke-miterlimit:10;
+		transform-origin: top;
+		transform-box:fill-box;
+		-webkit-animation-name: moveIt; 
+		-webkit-animation-duration: 2.5s;
+		animation: moveIt 2.5s ease-in-out infinite ;
+
+	}
+	#penduledroite{
+		fill:none;
+		stroke-width:6;
+		stroke-linecap:round;
+		stroke-miterlimit:10;
+		transform-origin: top;
+		transform-box:fill-box;
+		-webkit-animation-name: moveit; 
+		-webkit-animation-duration: 2.5s;
+		animation: moveit 2.5s ease-in-out infinite ;
+		animation-delay:1s;
+	}
+
+	@keyframes moveIt {
+		  0%, 50% {
+		    transform: rotate(45deg);
+		  }
+		    50%,100% {
+		    transform: rotate(0deg);
+		  }
+	}
+	@keyframes moveit {
+		  0%, 50% {
+		    transform: rotate(0deg);
+		  }
+		    50%,100% {
+		    transform: rotate(-45deg);
+		  }
+	}
+
+	@-webkit-keyframes bouge {
+		from{
+		stroke-dashoffset: 800;
+		}
+		to{
+		stroke-dashoffset: 0;
+		}
+	}
+	@keyframes vent{
+				0%{stroke-dashoffset: 175; }
+				100%{stroke-dashoffset: 0;}
+			}
 	@keyframes rotate { 100% 
 		{
     		transform: rotate(360deg);
@@ -112,7 +249,7 @@
 		<g>
 			<g>
 				<path class="st2" d="M1280.9,580.1c-0.1-0.2-0.1-0.4-0.2-0.6c-0.1-0.1-0.1-0.2-0.2-0.3l-17.8-33.2c-0.5-1-1.6-1.6-2.7-1.6H115
-					c-1.1,0-2.2,0.6-2.7,1.6l-17.8,33.2c-0.1,0.1-0.1,0.2-0.2,0.3c-0.1,0.2-0.2,0.4-0.2,0.6c-0.1,0.2-0.1,0.6-0.1,0.8
+					c-1.1,0-2.2,0.6-2.7,1.6l-17.8,33.2c-0.1,0.1-0.1,0.2-0.2,0.3c-0.1,0.2-0.2,0.4-0.2,0.6c-0.1,0.3-0.1,0.6-0.1,0.8
 					c0,0.6,0.2,1.1,0.4,1.6c0.6,1,1.6,1.5,2.7,1.5h1180.9c1.1,0,2.1-0.6,2.7-1.5c0.3-0.5,0.4-1,0.4-1.6
 					C1281,580.7,1281,580.3,1280.9,580.1z M102.2,577.8l14.6-27.3H1258l14.6,27.3H102.2z"/>
 				<polygon class="st3" points="1272.7,577.8 102.2,577.8 116.8,550.5 1258,550.5 				"/>
@@ -125,7 +262,7 @@
 			<path class="st2" d="M325.2,665.3c1.7,0,3.1,1.4,3.1,3.1v3.1h718.2v-3.1c0-1.7,1.4-3.1,3.1-3.1H325.2z M1069.2,665.3H305.7
 				c-1.7,0-3.1,1.4-3.1,3.1V768h6.2v-96.4h757.3V768h6.2v-99.6C1072.3,666.7,1070.9,665.3,1069.2,665.3z M1280.9,580.1
 				c-0.1-0.2-0.1-0.4-0.2-0.6c-0.1-0.1-0.1-0.2-0.2-0.3c-0.6-0.8-1.5-1.4-2.6-1.4H97c-1.1,0-2,0.6-2.6,1.4c-0.1,0.1-0.1,0.2-0.2,0.3
-				c-0.1,0.2-0.2,0.4-0.2,0.6c-0.1,0.2-0.1,0.6-0.1,0.8V768h6.2V584.1h1174.7V768h6.2V580.9C1281,580.7,1281,580.3,1280.9,580.1z
+				c-0.1,0.2-0.2,0.4-0.2,0.6c-0.1,0.3-0.1,0.6-0.1,0.8V768h6.2V584.1h1174.7V768h6.2V580.9C1281,580.7,1281,580.3,1280.9,580.1z
 				 M325.2,665.3c1.7,0,3.1,1.4,3.1,3.1v3.1h718.2v-3.1c0-1.7,1.4-3.1,3.1-3.1H325.2z"/>
 			<rect x="308.8" y="671.6" class="st3" width="13.3" height="96.4"/>
 			<path class="st3" d="M100.1,584.1V768h13.8v-99.6c0-1.7,1.4-3.1,3.1-3.1h167.7c1.7,0,3.1,1.4,3.1,3.1V768h14.8v-99.6
@@ -347,9 +484,9 @@
 			<path class="st6" d="M981.1,553.6c-1.6,0-2.8-1.3-2.8-2.8c0-1.6,1.3-2.8,2.8-2.8c9.1,0,16.5-7.4,16.5-16.5s-7.4-16.5-16.5-16.5
 				c-1.6,0-2.8-1.3-2.8-2.8c0-1.6,1.3-2.8,2.8-2.8c12.2,0,22.1,9.9,22.1,22.1C1003.3,543.6,993.3,553.6,981.1,553.6z"/>
 		</g>
-		<path class="st11" pathLenght="100" d="M941,505c0,0-8-13,0-23s0-22,0-21"/>
-		<path class="st11" pathLenght="100" d="M959.5,490c0,0-3.8-14.8,6.8-22c10.6-7.2,6.5-21,6.2-20.1"/>
-		<path class="st11" pathLenght="100" d="M950.5,459c0,0-3.8-14.8,6.8-22c10.6-7.2,6.5-21,6.2-20.1"/>
+		<path class="trait1" d="M941,505c0,0-8-13,0-23s0-22,0-21"/>
+		<path class="trait2" d="M959.5,490c0,0-3.8-14.8,6.8-22c10.6-7.2,6.5-21,6.2-20.1"/>
+		<path class="trait3" d="M950.5,459c0,0-3.8-14.8,6.8-22c10.6-7.2,6.5-21,6.2-20.1"/>
 	</g>
 	<g id="posepapier">
 		<g>
@@ -674,54 +811,58 @@
 				C821.3,99.8,819.8,101.3,817.9,101.3z"/>
 		</g>
 	</g>
-	<g id="pendule">
-		<rect x="531.1" y="160.9" class="st6" width="146.5" height="10.7"/>
+	<rect x="531.1" y="160.9" class="st6" width="146.5" height="10.7"/>
+	<g>
+		<path class="st6" d="M665.4,161c-1.9,0-3.5-1.5-3.5-3.5V59.9H546.8v97.7c0,1.9-1.5,3.5-3.5,3.5s-3.5-1.5-3.5-3.5V56.5
+			c0-1.9,1.5-3.5,3.5-3.5h122c1.9,0,3.5,1.5,3.5,3.5v101.1C668.8,159.5,667.3,161,665.4,161z"/>
+	</g>
+	<g>
+		<path class="st6" d="M678.7,178.3H530.1c-1.9,0-3.5-1.5-3.5-3.5v-17.3c0-1.9,1.5-3.5,3.5-3.5h148.6c1.9,0,3.5,1.5,3.5,3.5v17.3
+			C682.1,176.8,680.6,178.3,678.7,178.3z M533.5,171.4h141.7V161H533.5V171.4z"/>
+	</g>
+	<g id="pendulegauche">
+		<line class="st14" x1="573" y1="57" x2="573" y2="129"/>
 		<g>
-			<path class="st6" d="M665.4,161c-1.9,0-3.5-1.5-3.5-3.5V59.9H546.8v97.7c0,1.9-1.5,3.5-3.5,3.5s-3.5-1.5-3.5-3.5V56.5
-				c0-1.9,1.5-3.5,3.5-3.5h122c1.9,0,3.5,1.5,3.5,3.5v101.1C668.8,159.5,667.3,161,665.4,161z"/>
-		</g>
-		<g>
-			<path class="st6" d="M678.7,178.3H530.1c-1.9,0-3.5-1.5-3.5-3.5v-17.3c0-1.9,1.5-3.5,3.5-3.5h148.6c1.9,0,3.5,1.5,3.5,3.5v17.3
-				C682.1,176.8,680.6,178.3,678.7,178.3z M533.5,171.4h141.7V161H533.5V171.4z"/>
-		</g>
-		<g>
-			<line class="st14" x1="573" y1="57" x2="573" y2="129"/>
-			<g>
-				<circle class="st3" cx="573.2" cy="129.1" r="10.4"/>
-			</g>
-		</g>
-		<g>
-			<line class="st14" x1="620" y1="57" x2="664" y2="123.3"/>
-			<g>
-				
-					<ellipse transform="matrix(0.9203 -0.3913 0.3913 0.9203 4.6828 269.661)" class="st3" cx="664" cy="123.3" rx="10.4" ry="10.4"/>
-			</g>
-		</g>
-		<g>
-			<line class="st14" x1="594" y1="57" x2="594" y2="129"/>
-			<g>
-				<circle class="st3" cx="594" cy="129.1" r="10.4"/>
-			</g>
-		</g>
-		<g>
-			<line class="st14" x1="615" y1="57" x2="615" y2="129"/>
-			<g>
-				<circle class="st3" cx="614.8" cy="129.1" r="10.4"/>
-			</g>
+			<circle class="st3" cx="573.2" cy="129.1" r="10.4"/>
 		</g>
 	</g>
-	<g id="horloge">
+	<g>
+		<line class="st14" x1="594" y1="57" x2="594" y2="129"/>
+		<g>
+			<circle class="st3" cx="594" cy="129.1" r="10.4"/>
+		</g>
+	</g>
+	<g>
+		<line class="st14" x1="615" y1="57" x2="615" y2="129"/>
+		<g>
+			<circle class="st3" cx="614.8" cy="129.1" r="10.4"/>
+		</g>
+	</g>
+	<g id="penduledroite">
+		<line class="st14" x1="636" y1="57" x2="636" y2="129"/>
+		<g>
+			<circle class="st3" cx="635.8" cy="129.1" r="10.4"/>
+		</g>
+	</g>
+	<g id="horloge_carrée">
 		<g>
 			<path class="st6" d="M352.8,257.1H174.3c-2.1,0-3.8-1.7-3.8-3.8V74.8c0-2.1,1.7-3.8,3.8-3.8h178.5c2.1,0,3.8,1.7,3.8,3.8v178.5
 				C356.6,255.4,354.9,257.1,352.8,257.1z M178.1,249.5H349V78.6H178.1V249.5z"/>
 		</g>
-		<line id="minute" pathLenght="100" class="st14" x1="264" y1="167" x2="264" y2="97"/>
-		<line id="heure" pathLenght="100" class="st14" x1="264" y1="167" x2="264" y2="132"/>
-		<line id="seconde" pathLenght="100" class="st15" x1="263.5" y1="167.5" x2="263.5" y2="101.5"/>
+		<line id="minute" class="st14" x1="264" y1="167" x2="264" y2="97"/>
+		<line id="heure" class="st14" x1="264" y1="167" x2="264" y2="132"/>
+		<line id="seconde" class="st15" x1="263.5" y1="167.5" x2="263.5" y2="101.5"/>
+	</g>
+	<g id="mmi">
+		<path class="m1" d="M542.6,424.8h-19.4L539,298.6l38,63.8l20.3,34.2l-11.2,18.6l-16.5-27.5l-18.4-31.3L542.6,424.8z
+			 M601.1,390.5L590,371.8l44-73.1l15.5,126.1H630l-8.3-68.5l-19.1,31.5L601.1,390.5z"/>
+		<path class="m2" d="M686,424.8h-19.4l15.8-126.1l38,63.8l20.3,34.2l-11.2,18.6L713,387.8l-18.4-31.3L686,424.8z M744.5,390.5
+			l-11.2-18.8l44-73.1l15.5,126.1h-19.4l-8.3-68.5L746,387.8L744.5,390.5z"/>
+		<path class="i" d="M809.8,298.6H831v126.1h-21.2V298.6z"/>
 	</g>
 </g>
 </svg>
-
+</div>
 
 
 

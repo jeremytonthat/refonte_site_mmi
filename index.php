@@ -23,6 +23,10 @@ get_header(); ?>
 
 <!-- Debut carousel -->
 
+		<div id="container">
+			<img src="">
+		</div>
+
 <!-- Fin carousel -->
 
 

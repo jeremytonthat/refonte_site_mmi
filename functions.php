@@ -22,7 +22,7 @@ function my_theme_enqueue_styles() {
 
 
 
-	wp_enqueue_style( 'style', THEME_URI.'/assets/css/style-1.css' );
+	wp_enqueue_style( 'style', THEME_URI.'/assets/css/style_accueil.css' );
 
 	wp_deregister_script( 'jquery' );
 

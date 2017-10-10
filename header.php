@@ -40,20 +40,11 @@
 
 ?>
 
-<div class="codesvg">
 <svg version="1.1" viewBox="0 0 1366 768" preserveAspectRatio="xMinYMin meet" class="svg-content">
 <style type="text/css">
 	body{
 		background-color: #BCAAA4;
 	}
-	.codesvg {
-			display: inline-block;
-			position: relative;
-			width: 100%;
-			padding-bottom: 100%;
-			vertical-align: middle;
-			overflow: hidden;
-		}
 	.svg-content {
 			display: inline-block;
 			position: absolute;
@@ -73,7 +64,7 @@
 	.st10{fill:#92D0B8;}
 	.trait1{
 		fill:none;
-		stroke:#FBB03B;
+		stroke:/*#FBB03B*/	#F9F4B6;
 		stroke-width:4;
 		stroke-linecap:round;
 		stroke-miterlimit:10;
@@ -85,7 +76,7 @@
 	}
 	.trait2{
 		fill:none;
-		stroke:#FBB03B;
+		stroke:/*#FBB03B*/	#F9F4B6;
 		stroke-width:4;
 		stroke-linecap:round;
 		stroke-miterlimit:10;
@@ -97,7 +88,7 @@
 	}
 	.trait3{
 		fill:none;
-		stroke:#FBB03B;
+		stroke:/*#FBB03B*/	#F9F4B6;
 		stroke-width:4;
 		stroke-linecap:round;
 		stroke-miterlimit:10;
@@ -132,8 +123,8 @@
 		stroke-dashoffset:0;
 		-webkit-animation-name: bouge; 
 		-webkit-animation-duration: 4s; 
-		animation: bouge 4s linear forwards;
-		animation-delay: 1s;
+		animation: bouge 4s linear infinite;
+		/*animation-delay: 1s;*/
 	}
 	.m2{
 		fill:none;
@@ -144,8 +135,8 @@
 		stroke-dashoffset:0; 
 		-webkit-animation-name: bouge; 
 		-webkit-animation-duration: 4s;
-		animation: bouge 4s linear forwards;
-		animation-delay: 3.2s;
+		animation: bouge 4s linear infinite;
+	/*	animation-delay: 3.2s;*/
 	}
 	.i{
 		fill:none;
@@ -156,8 +147,8 @@
 		stroke-dashoffset:0;
 		-webkit-animation-name: bouge; 
 		-webkit-animation-duration: 4s; 
-		animation: bouge 4s linear forwards;
-		animation-delay: 5s;
+		animation: bouge 4s linear infinite;
+		/*animation-delay: 5s;*/
 	}
 	   #minute{
 		transform-origin: 50% 100%;
@@ -187,9 +178,10 @@
 		stroke-miterlimit:10;
 		transform-origin: top;
 		transform-box:fill-box;
-		-webkit-animation-name: moveIt; 
-		-webkit-animation-duration: 2.5s;
-		animation: moveIt 2.5s ease-in-out infinite ;
+		-webkit-animation-name: movegauche; 
+		-webkit-animation-duration: 4s;
+		animation: movegauche 4s linear infinite ;
+		animation-delay:0s;
 
 	}
 	#penduledroite{
@@ -199,28 +191,52 @@
 		stroke-miterlimit:10;
 		transform-origin: top;
 		transform-box:fill-box;
-		-webkit-animation-name: moveit; 
-		-webkit-animation-duration: 2.5s;
-		animation: moveit 2.5s ease-in-out infinite ;
-		animation-delay:1s;
+		-webkit-animation-name: movedroit; 
+		-webkit-animation-duration: 4s;
+		animation: movedroit 4s linear infinite ;
+		animation-delay:0.90s;
 	}
 
-	@keyframes moveIt {
-		  0%, 50% {
+	@keyframes movegauche{
+		  
+		  0% {
 		    transform: rotate(45deg);
 		  }
-		    50%,100% {
+		    25% {
 		    transform: rotate(0deg);
 		  }
-	}
-	@keyframes moveit {
-		  0%, 50% {
+
+		  50%{
+		  	transform: rotate(0deg);
+		  }
+
+		  75%{
+		  	transform: rotate(0deg);
+		  }
+
+		  100%{
+		  	transform: rotate(45deg);
+		  }
+		}
+
+	@keyframes movedroit {
+
+			0% {
 		    transform: rotate(0deg);
 		  }
-		    50%,100% {
-		    transform: rotate(-45deg);
+		  25%{
+		  	transform: rotate(-45deg);
 		  }
-	}
+		   50%{
+		  	transform: rotate(0deg);
+		  }
+		   75%{
+		  	transform: rotate(0deg);
+		  }
+		   100%{
+		  	transform: rotate(0deg);
+		  }
+		}
 
 	@-webkit-keyframes bouge {
 		from{
@@ -862,7 +878,6 @@
 	</g>
 </g>
 </svg>
-</div>
 
 
 
